@@ -43,6 +43,7 @@ main {
 
 img {
     width: 70px;
+    border-radius: 40px;
 }
 
 .items_container i {
