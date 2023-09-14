@@ -16,8 +16,13 @@
 /* barra in background iniziale */
 
 main {
+    background-color: #DBDBD2;
+    height: 100vh;
+}
+
+.top_bar {
     height: 100px;
-    background-color: aquamarine;
+    background-color: #009688;
     position: relative;
 }
 
@@ -90,11 +95,16 @@ img {
 
 .main_container_dx {
     height: 90%;
-    background-color: whitesmoke;
+    background-color:#e9e0d6;
 }
 
 .right_5 {
     right: 5px;
+}
+
+.friends_chat:hover {
+    background-color: lightgray;
+    cursor: pointer;
 }
 
 .message {
@@ -113,6 +123,7 @@ img {
     right: 10px;
     position: absolute;
     bottom: 0;
+    font-size: 12px;
 }
 
 /* final chat section */

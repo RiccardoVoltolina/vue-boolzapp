@@ -14,161 +14,164 @@
 
     <div id="app">
 
-        <!-- barra colorata background -->
-
+        
         <main>
+            <!-- barra colorata background -->
+            <div class="top_bar">
 
-            <!-- container principale -->
-
-            <div class="my_container">
-                <header>
-                    <div class="container-fluid bg-white g-0">
-                        <div class="row g-0">
-                            <!-- colonna header sx -->
-
-                            <div class="col-4 bg_light_gray d-flex align-items-center justify-content-between p-2 border-end border-2">
-
-                                <!-- lato sx colonna sx -->
-
-                                <div class="d-flex align-items-center">
-                                    <img src="./assets/img/avatar_1.jpg" alt="">
-                                    <div class="text-black">Sofia</div>
-                                </div>
-                                <!-- lato dx colonna sx -->
-
-                                <div class="d-flex align-items-center text-white items_container color_items">
-                                    <i class="fa-solid fa-circle-notch"></i><i class="fa-solid fa-message"></i><i class="fa-solid fa-ellipsis-vertical"></i>
-                                </div>
-                            </div>
-
-                            <!-- colonna header dx -->
-
-                            <div class="col-8 bg_light_gray d-flex align-items-center justify-content-between p-2">
-
-                                <!-- lato sx colonna dx -->
-
-
-                                <div class="d-flex align-items-center">
-                                    <img src="./assets/img/avatar_1.jpg" alt="">
-                                    <div class="text-white">
-                                        <div class="text-black">Michele</div>
-                                        <div class="text-muted">Ultimo accesso oggi alle 12:00</div>
+                <!-- container principale -->
+    
+                <div class="my_container">
+                    <header>
+                        <div class="container-fluid bg-white g-0">
+                            <div class="row g-0">
+                                <!-- colonna header sx -->
+    
+                                <div class="col-4 bg_light_gray d-flex align-items-center justify-content-between p-2 border-end border-2">
+    
+                                    <!-- lato sx colonna sx -->
+    
+                                    <div class="d-flex align-items-center">
+                                        <img src="./assets/img/avatar_1.jpg" alt="">
+                                        <div class="text-black">Sofia</div>
+                                    </div>
+                                    <!-- lato dx colonna sx -->
+    
+                                    <div class="d-flex align-items-center text-white items_container color_items">
+                                        <i class="fa-solid fa-circle-notch"></i><i class="fa-solid fa-message"></i><i class="fa-solid fa-ellipsis-vertical"></i>
                                     </div>
                                 </div>
-
-                                <!-- lato dx colonna dx -->
-
-                                <div class="d-flex align-items-center text-white items_container color_items">
-                                    <i class="fa-solid fa-magnifying-glass"></i><i class="fa-solid fa-paperclip"></i><i class="fa-solid fa-ellipsis-vertical"></i>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- corpo my_container -->
-
-                        <div class="row g-0">
-
-                            <!-- colonna sx corpo main -->
-                            
-                            <div class="col-4 d-flex flex-column">
-
-                                <!-- ricevi notifiche -->
-
-                                <div class="d-flex align-items-center bg_color_light_blue">
-                                    <div class="circle m-3 font_size_30"><i class="fa-solid fa-bell-slash" style="color: #7ecad7;"></i></div>
-                                    <div>
-                                        <div>Ricevi notifiche di nuovi messaggi!</div>
-                                        <div class="text-decoration-underline">Attiva notifiche desktop</div>
+    
+                                <!-- colonna header dx -->
+    
+                                <div class="col-8 bg_light_gray d-flex align-items-center justify-content-between p-2">
+    
+                                    <!-- lato sx colonna dx -->
+    
+    
+                                    <div class="d-flex align-items-center">
+                                        <img src="./assets/img/avatar_1.jpg" alt="">
+                                        <div class="text-white">
+                                            <div class="text-black">Michele</div>
+                                            <div class="text-muted">Ultimo accesso oggi alle 12:00</div>
+                                        </div>
                                     </div>
+    
+                                    <!-- lato dx colonna dx -->
+    
+                                    <div class="d-flex align-items-center text-white items_container color_items">
+                                        <i class="fa-solid fa-magnifying-glass"></i><i class="fa-solid fa-paperclip"></i><i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </div>
+    
                                 </div>
-
-                                <!-- cerca/inizia chat -->
-
-                                <div class="input-group p-2">
-                                    <span class="input-group-text bg-white no_border color_items" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                    <input type="text" class="form-control no_border" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
-                                </div>
-
-                                <!-- inizio area utenti -->
+                            </div>
+    
+                            <!-- corpo my_container -->
+    
+                            <div class="row g-0">
+    
+                                <!-- colonna sx corpo main -->
                                 
-                                <div class="overflow-scroll height_600">
-                                    <div class="d-flex flex-column justify-content-center pt-1">
-                                        <div v-for="(contact, i) in contacts" class="d-flex ps-2 py-2">
-                                            <img :src="contact.avatar" alt="">
-                                            <div class="d-flex flex-column ps-3">
-
-                                                <div>{{contact.name}}</div>
-                                                <div>Ultimo messaggio iviato</div>
+                                <div class="col-4 d-flex flex-column">
+    
+                                    <!-- ricevi notifiche -->
+    
+                                    <div class="d-flex align-items-center bg_color_light_blue">
+                                        <div class="circle m-3 font_size_30"><i class="fa-solid fa-bell-slash" style="color: #7ecad7;"></i></div>
+                                        <div>
+                                            <div>Ricevi notifiche di nuovi messaggi!</div>
+                                            <div class="text-decoration-underline">Attiva notifiche desktop</div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- cerca/inizia chat -->
+    
+                                    <div class="input-group p-2 border-start border-end">
+                                        <span class="input-group-text bg-white no_border color_items" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                        <input type="text" class="form-control no_border" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+    
+                                    <!-- inizio area utenti -->
+                                    
+                                    <div class="overflow-scroll height_600 border-bottom">
+                                        <div class="d-flex flex-column justify-content-center pt-1">
+                                            <div v-for="(contact, i) in contacts" class="d-flex ps-2 py-2 border friends_chat">
+                                                <img :src="contact.avatar" alt="">
+                                                <div class="d-flex flex-column ps-3">
+    
+                                                    <div>{{contact.name}}</div>
+                                                    <div>Ultimo messaggio iviato</div>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                
+                                <!-- area dx main -->
+    
+                                <div class="col-8">
+                                    <div class="main_container_dx">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12 d-flex justify-content-end mt-5">
+                                                    <div class="message__by_me message send_by_me position-relative d-flex flex-column justify-content-center">
+                                                        <div class="ps-2">Hai portato a spasso il cane?</div>
+                                                        <div class="chat_time">15:30</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 d-flex justify-content-end mt-2">
+                                                    <div class="message__by_me message send_by_me position-relative d-flex flex-column justify-content-center">
+                                                        <div class="ps-2">Hai portato a spasso il cane?</div>
+                                                        <div class="chat_time">15:30</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 d-flex justify-content-start mt-2 ms-5">
+                                                    <div class="message position-relative d-flex flex-column justify-content-center">
+                                                        <div class="ps-2">Hai portato a spasso il cane?</div>
+                                                        <div class="chat_time">15:30</div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-
+    
+                                        <!-- fine area main centrale -->
+    
+                                    </div>
+                                    <!-- inizio chatbox main -->
+                                    <div class="height_15 bg_light_gray">
+                                        <div class="container w-100 h-100 p-0">
+                                            <div class="row h-100 px-0 g-0">
+                                                <div class="col-1 h-100 d-flex align-items-center justify-content-center bg_light_gray">
+                                                    <div class="color_items"><i class="fa-regular fa-face-smile"></i></div>
+                                                </div>
+                                                <div class="col-10  d-flex bg_light_gray">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control no_border" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                                                    </div>
+                    
+                                                </div>
+                                                <div class="col-1 h-100 d-flex align-items-center justify-content-center bg_light_gray">
+                                                    <div class="color_items"><i class="fa-solid fa-microphone"></i></div>
+                                                </div>
+                                                
+                                            </div>
+    
+                                        </div>
                                     </div>
                                 </div>
-
                             </div>
-                            
-                            <!-- area dx main -->
-
-                            <div class="col-8">
-                                <div class="main_container_dx">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-12 d-flex justify-content-end mt-5">
-                                                <div class="message__by_me message send_by_me position-relative d-flex flex-column justify-content-center">
-                                                    <div class="ps-2">Hai portato a spasso il cane?</div>
-                                                    <div class="chat_time">15:30</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 d-flex justify-content-end mt-2">
-                                                <div class="message__by_me message send_by_me position-relative d-flex flex-column justify-content-center">
-                                                    <div class="ps-2">Hai portato a spasso il cane?</div>
-                                                    <div class="chat_time">15:30</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 d-flex justify-content-start mt-2 ms-5">
-                                                <div class="message position-relative d-flex flex-column justify-content-center">
-                                                    <div class="ps-2">Hai portato a spasso il cane?</div>
-                                                    <div class="chat_time">15:30</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- fine area main centrale -->
-
-                                </div>
-                                <!-- inizio chatbox main -->
-                                <div class="height_15 bg_light_gray">
-                                    <div class="container w-100 h-100">
-                                        <div class="row h-100 px-0 g-0">
-                                            <div class="col-2 h-100 d-flex align-items-center justify-content-center bg_light_gray">
-                                                <div class="color_items"><i class="fa-regular fa-face-smile"></i></div>
-                                            </div>
-                                            <div class="col-8  d-flex bg_light_gray">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control no_border" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
-                                                </div>
-                
-                                            </div>
-                                            <div class="col-2 h-100 d-flex align-items-center justify-content-center bg_light_gray">
-                                                <div class="color_items"><i class="fa-solid fa-microphone"></i></div>
-                                            </div>
-                                            
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
+    
                         </div>
-
-                    </div>
-                </header>
+                    </header>
+                </div>
             </div>
+
         </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
