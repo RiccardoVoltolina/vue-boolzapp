@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bz-app-principal: #DBDBD2;
+    --bz-app-header: #009688;
+    --bz-app-success: #D5F9BA;
+    --bz-app-light: #E9EBEB;
+    --bz-app-white: #FFFFFF;
+    --bz-app-focus: #8EDAFC;
+}
+
 /* barra in background iniziale */
 
 main {
@@ -60,4 +69,10 @@ img {
 
 .no_border {
     border-radius: 0;
+}
+
+/* inizio area utenti */
+
+.height_600 {
+    height: 600px;
 }
