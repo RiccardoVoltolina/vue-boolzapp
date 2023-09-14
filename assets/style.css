@@ -4,11 +4,15 @@
     box-sizing: border-box;
 }
 
+/* barra in background iniziale */
+
 main {
     height: 100px;
     background-color: aquamarine;
     position: relative;
 }
+
+/* container principale */
 
 .my_container {
     top: 35px;
@@ -20,4 +24,27 @@ main {
     margin-left: auto;
     margin-right: auto;
     width: 1600px;
+}
+
+/* header container principale */
+
+.height_100px{
+    height: 100px;
+}
+
+/* grandezza provvisora col */
+
+.col-5 , .col-7 {
+    height: 100px;
+    border: 1px solid white;
+}
+
+
+
+img {
+    width: 70px;
+}
+
+.items_container i {
+    padding-right: 15px;
 }
