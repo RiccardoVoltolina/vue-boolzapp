@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100px;
+    background-color: aquamarine;
+    position: relative;
+}
+
+.my_container {
+    top: 35px;
+    background-color: blue;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1600px;
+}
