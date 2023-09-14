@@ -23,7 +23,7 @@ main {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 1600px;
+    width: 1200px;
 }
 
 /* header container principale */
@@ -49,3 +49,5 @@ img {
 .items_container i {
     padding-right: 15px;
 }
+
+/* fine header */
