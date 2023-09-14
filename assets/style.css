@@ -76,3 +76,14 @@ img {
 .height_600 {
     height: 600px;
 }
+
+/* sezione dx */
+
+.main_container_dx {
+    height: calc(100% - 80px);
+    background-color: green;
+}
+
+.right_5 {
+    right: 5px;
+}
