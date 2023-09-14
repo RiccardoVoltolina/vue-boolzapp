@@ -35,8 +35,9 @@ main {
 
 /* header container principale */
 
-.col-5 , .col-7 {
-    border: 1px solid white;
+
+.bg_light_gray {
+    background-color: #DBDBD2;
 }
 
 
@@ -67,8 +68,16 @@ img {
     font-size: 30px;
 }
 
+.color_items i {
+    color: gray;
+}
+
 .no_border {
     border-radius: 0;
+}
+
+.bg_color_light_blue {
+    background-color: #8EDAFC;
 }
 
 /* inizio area utenti */
@@ -80,20 +89,24 @@ img {
 /* sezione dx */
 
 .main_container_dx {
-    height: calc(100% - 80px);
-    background-color: green;
+    height: 90%;
+    background-color: whitesmoke;
 }
 
 .right_5 {
     right: 5px;
 }
 
-.my_card {
+.message {
     width: 300px;
     height: 65px;
-    background-color: white;
     border-radius: 10px;
     margin-right: 45px;
+    background-color: white;
+}
+
+.message__by_me {
+    background-color: #D5F9BA;
 }
 
 .chat_time {
@@ -101,3 +114,10 @@ img {
     position: absolute;
     bottom: 0;
 }
+
+/* final chat section */
+
+.height_15 {
+    height: 10%;
+}
+
