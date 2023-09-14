@@ -16,8 +16,6 @@ main {
 
 .my_container {
     top: 35px;
-    background-color: blue;
-    height: 600px;
     position: absolute;
     left: 0;
     right: 0;
