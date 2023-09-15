@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        activeContact: 1,
         contacts: [
             {
                 name: 'Michele',
@@ -161,12 +162,20 @@ const { createApp } = Vue
                     {
                         date: '10/01/2020 15:51:00',
                         message: 'OK!!',
-                        status: 'received'
-                    }
+                        status: 'received',
+                    },
                 ],
             }
         ]
         
       }
+    },
+    methods: {
+        messaggioSingolo(messages) {
+            if (messages.length > 0) {
+                return messages[0].message
+            }
+        }
+       
     }
   }).mount('#app')

@@ -116,8 +116,8 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-12 d-flex justify-content-end mt-5">
-                                                    <div class="message__by_me message send_by_me position-relative d-flex flex-column justify-content-center">
-                                                        <div v-for="(message, i) in contacts" class="ps-2">{{message.messages[message]}}</div>
+                                                    <div v-for="contact in contacts" :key="contact.name" class="message__by_me message send_by_me position-relative d-flex flex-column justify-content-center">
+                                                        <div class="ps-2">{{messaggioSingolo(contact.messages)}}</div>
                                                         <div class="chat_time">15:30</div>
                                                     </div>
                                                 </div>

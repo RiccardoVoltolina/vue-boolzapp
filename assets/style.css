@@ -27,7 +27,6 @@ main {
 .top_bar {
     height: 100px;
     background-color: #009688;
-    position: relative;
 }
 
 /* container principale */
