@@ -33,7 +33,7 @@
     
                                     <div class="d-flex align-items-center">
                                         <img src="./assets/img/avatar_1.jpg" alt="">
-                                        <div class="text-black">Sofia</div>
+                                        <div class="text-black">{{me}}</div>
                                     </div>
                                     <!-- lato dx colonna sx -->
     
@@ -96,7 +96,7 @@
                                     <div class="overflow-scroll height_600 border-bottom">
                                         <div class="d-flex flex-column justify-content-center pt-1">
                                             
-                                            <div v-for="(contact, i) in contacts" class="d-flex ps-2 py-2 border friends_chat">
+                                            <div v-for="(contact, i) in contacts" @click="activeContact = i" class="d-flex ps-2 py-2 border friends_chat">
                                                 <img :src="contact.avatar" alt="">
                                                 <div class="d-flex flex-column ps-3">
     
@@ -116,21 +116,21 @@
                                     <div class="main_container_dx">
                                         <div class="container height_650 overflow-scroll">
                                             <div class="row p-2">
-                                                <div v-for="(contact, index) in contacts" class="col-12 d-flex justify-content-end mt-2">
+                                                <div v-for="(contact, index) in contacts[activeContact].messages" class="col-12 d-flex justify-content-end mt-2">
                                                     <div class="message__by_me message send_by_me position-relative d-flex flex-column justify-content-center">
-                                                        <div class="ps-2">{{messaggioSingolo(contact.messages)}}</div>
+                                                        <div class="ps-2">{{contact.message}}</div>
                                                         <div class="chat_time">15:30</div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row">
+                                         <!--    <div class="row">
                                                 <div class="col-12 d-flex justify-content-start mt-2 ms-5">
                                                     <div class="message position-relative d-flex flex-column justify-content-center">
                                                         <div class="ps-2">Hai portato a spasso il cane?</div>
                                                         <div class="chat_time">15:30</div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
     
                                         <!-- fine area main centrale -->

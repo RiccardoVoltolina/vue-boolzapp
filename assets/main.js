@@ -3,16 +3,19 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        activeContact: 1,
+        me: 'Sofia',
+        arrayMessaggi : [],
+        activeContact: 0,
         contacts: [
             {
-                name: 'Michele',
+                name: 'Michele', /* this.contacts[0].name */
+                
                 avatar: './assets/img/avatar_1.jpg',
                 visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Hai portato a spasso il cane?',
+                        message: 'Hai portato a spasso il cane?', /* this.contacts[0].messages[0].message */
                         status: 'sent'
                     },
                     {
