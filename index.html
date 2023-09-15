@@ -95,6 +95,7 @@
                                     
                                     <div class="overflow-scroll height_600 border-bottom">
                                         <div class="d-flex flex-column justify-content-center pt-1">
+                                            
                                             <div v-for="(contact, i) in contacts" class="d-flex ps-2 py-2 border friends_chat">
                                                 <img :src="contact.avatar" alt="">
                                                 <div class="d-flex flex-column ps-3">
@@ -115,8 +116,8 @@
                                     <div class="main_container_dx">
                                         <div class="container">
                                             <div class="row">
-                                                <div class="col-12 d-flex justify-content-end mt-5">
-                                                    <div v-for="contact in contacts" :key="contact.name" class="message__by_me message send_by_me position-relative d-flex flex-column justify-content-center">
+                                                <div v-for="contact in contacts" :key="contact.name" class="col-12 d-flex justify-content-end mt-5">
+                                                    <div class="message__by_me message send_by_me position-relative d-flex flex-column justify-content-center">
                                                         <div class="ps-2">{{messaggioSingolo(contact.messages)}}</div>
                                                         <div class="chat_time">15:30</div>
                                                     </div>
