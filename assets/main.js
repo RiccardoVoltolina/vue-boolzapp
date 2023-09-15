@@ -175,6 +175,9 @@ const { createApp } = Vue
             if (messages.length > 0) {
                 return messages[0].message
             }
+            else {
+                ''
+            }
         }
        
     }
