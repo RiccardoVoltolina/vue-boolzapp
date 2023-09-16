@@ -116,8 +116,8 @@
                                     <div class="main_container_dx">
                                         <div class="container height_650 overflow-scroll">
                                             <div class="row p-2">
-                                                <div v-for="(contact, index) in contacts[activeContact].messages" class="col-12 d-flex justify-content-end mt-2">
-                                                    <div class="message__by_me message send_by_me position-relative d-flex flex-column justify-content-center">
+                                                <div v-for="(contact, index) in contacts[activeContact].messages" class="col-12 d-flex mt-2" :class="contact.status == 'sent' ? 'justify-content-end' : 'justify-content-start'">
+                                                    <div :class="contact.status == 'sent' ? 'message__by_me' : 'bg-white'" class="message send_by_me position-relative d-flex flex-column justify-content-center">
                                                         <div class="ps-2">{{contact.message}}</div>
                                                         <div class="chat_time">15:30</div>
                                                     </div>
