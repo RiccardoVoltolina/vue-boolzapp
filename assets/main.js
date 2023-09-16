@@ -3,6 +3,8 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        
+        messaggioScritto:'',
         me: 'Sofia',
         activeContact: 0,
         contacts: [
@@ -173,12 +175,35 @@ const { createApp } = Vue
       }
     },
     methods: {
-        messaggioSingolo(messages) {
-            if (messages.length > 0) {
-                return messages[0].message
-            }
+        inviaMessaggio() {
+            console.log('ciao')
+           if (this.messaggioScritto !== '') {
+             const dataOggi = new Date()
+             this.contacts[this.activeContact].messages.push({
+                date: dataOggi,
+                message: this.messaggioScritto,
+                status: 'sent',
+                
+            })
+           }
+           this.messaggioScritto = ''
+           autoMessage = setTimeout(this.autoAnswer , 1000)
             
+        },
+
+        autoAnswer() {
+            const dataOggi = new Date()
+            this.contacts[this.activeContact].messages.push({
+               date: dataOggi,
+               message: 'ok',
+               status: 'received',
+               
+           })
         }
+
        
     }
   }).mount('#app')
+
+
+

@@ -145,7 +145,7 @@
                                                 </div>
                                                 <div class="col-10  d-flex bg_light_gray">
                                                     <div class="input-group py-2">
-                                                        <input type="text" class="form-control no_border" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                                                        <input v-model="messaggioScritto" type="text" class="form-control no_border" @keyup.enter="inviaMessaggio()" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
                                                     </div>
                     
                                                 </div>
