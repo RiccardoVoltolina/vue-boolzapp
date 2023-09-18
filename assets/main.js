@@ -210,6 +210,7 @@ const { createApp } = Vue
                 } else if (!this.contacts.name.toLowerCase().includes(search)) {
                     this.contacts[index].visible = false;
                 }
+                console.log('funziono');
 
                 
             }
