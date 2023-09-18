@@ -50,9 +50,9 @@
     
     
                                     <div class="d-flex align-items-center">
-                                        <img src="./assets/img/avatar_1.jpg" alt="">
+                                        <img :src="contacts[activeContact].avatar" alt="">
                                         <div class="text-white">
-                                            <div class="text-black">Michele</div>
+                                            <div class="text-black">{{contacts[activeContact].name}}</div>
                                             <div class="text-muted">Ultimo accesso oggi alle 12:00</div>
                                         </div>
                                     </div>
