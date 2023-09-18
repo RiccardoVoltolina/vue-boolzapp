@@ -3,7 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        
+        search: '',
         messaggioScritto:'',
         me: 'Sofia',
         activeContact: 0,
@@ -170,8 +170,38 @@ const { createApp } = Vue
                     },
                 ],
             }
-        ]
+        ], 
         
+/*         computed: {
+            filtered_people(){
+                let vm = this;
+                if(!vm.filters.searchPeopleTextValue){
+                    return [];
+                }
+                return vm.sortedPeople.filter(people => {
+                    return people.name.toLowerCase().indexOf(vm.filters.searchPeopleTextValue.toLowerCase()) != -1
+                })
+            },
+            sortedPeople: function() {
+    
+                function compare(a, b) {
+    
+                    if (a.name < b.name)
+                        return -1;
+                    if (a.name > b.name)
+                        return 1;
+    
+                    return 0;
+                }
+    
+                let sortedArr = this.People.sort(compare);
+    
+                return sortedArr;
+            }
+        }
+    
+ */
+              
       }
     },
     methods: {
@@ -199,11 +229,43 @@ const { createApp } = Vue
                status: 'received',
                
            })
-        }
+        },      
 
-       
+           
+        
     }
   }).mount('#app')
 
 
+/* 
 
+ computed: {
+        // returns list of cars based of filters
+        filtered_people(){
+            let vm = this;
+            if(!vm.filters.searchPeopleTextValue){
+                return [];
+            }
+            return vm.sortedPeople.filter(people => {
+                return people.name.toLowerCase().indexOf(vm.filters.searchPeopleTextValue.toLowerCase()) != -1
+            })
+        },
+        sortedPeople: function() {
+
+            function compare(a, b) {
+
+                if (a.name < b.name)
+                    return -1;
+                if (a.name > b.name)
+                    return 1;
+
+                return 0;
+            }
+
+            let sortedArr = this.People.sort(compare);
+
+            return sortedArr;
+        }
+    }
+
+*/
