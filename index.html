@@ -96,11 +96,11 @@
                                     <!-- inizio area utenti -->
                                     
                                     <div class="overflow-scroll height_600 border-bottom">
-                                        <div class="d-flex flex-column justify-content-center pt-1">
+                                        <div class="d-flex flex-column justify-content-center" v-for="(contact, i) in contacts" @click="activeContact = i">
                                             
-                                            <div v-for="(contact, i) in contacts" @click="activeContact = i" class="d-flex ps-2 py-2 border friends_chat">
-                                                <img v-if="contacts[i].visible == true" :src="contact.avatar" alt="">
-                                                <div v-if="contacts[i].visible == true" class="d-flex flex-column ps-3">
+                                            <div class="d-flex ps-2 py-2 border friends_chat" v-if="contacts[i].visible == true">
+                                                <img :src="contact.avatar" alt="">
+                                                <div class="d-flex flex-column ps-3">
     
                                                     <div>{{contact.name}}</div>
                                                     <div>Ultimo messaggio iviato</div>
