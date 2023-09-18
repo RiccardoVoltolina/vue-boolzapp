@@ -85,6 +85,8 @@
                                     </div>
     
                                     <!-- cerca/inizia chat -->
+
+                                     
     
                                     <div class="input-group p-2 border-start border-end">
                                         <span class="input-group-text bg-white no_border color_items" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -96,7 +98,7 @@
                                     <div class="overflow-scroll height_600 border-bottom">
                                         <div class="d-flex flex-column justify-content-center pt-1">
                                             
-                                            <div v-for="(contact, i) in contacts" @click="activeContact = i" class="d-flex ps-2 py-2 border friends_chat">
+                                            <div v-if="contact.visible == true" v-for="(contact, i) in contacts" @click="activeContact = i" class="d-flex ps-2 py-2 border friends_chat">
                                                 <img :src="contact.avatar" alt="">
                                                 <div class="d-flex flex-column ps-3">
     
@@ -107,6 +109,8 @@
     
                                         </div>
                                     </div>
+
+                                   
     
                                 </div>
                                 

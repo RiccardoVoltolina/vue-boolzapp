@@ -207,7 +207,7 @@ const { createApp } = Vue
                 const verificaContatto = this.search.toLowerCase();
                 if (verificaContatto == '') {
                     this.contacts[index].visible = true;
-                } else if (!this.contacts.name.toLowerCase().includes(search)) {
+                } else if (!this.contacts[index].name.toLowerCase().includes(verificaContatto)) {
                     this.contacts[index].visible = false;
                 }
                 console.log('funziono');
