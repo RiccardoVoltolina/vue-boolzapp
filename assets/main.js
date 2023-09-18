@@ -210,7 +210,7 @@ const { createApp } = Vue
                 } else if (!this.contacts[index].name.toLowerCase().includes(verificaContatto)) {
                     this.contacts[index].visible = false;
                 }
-                console.log('funziono');
+                console.log(this.contacts[index].visible);
 
                 
             }
