@@ -5,7 +5,7 @@ const { createApp } = Vue
       return {
         search: '',
         messaggioScritto:'',
-        me: 'Sofia',
+        me: 'Riky',
         activeContact: 0,
         contacts: [
             {
@@ -211,7 +211,6 @@ const { createApp } = Vue
                     this.contacts[index].visible = false;
                 }
                 console.log(this.contacts[index].visible);
-
                 
             }
         }

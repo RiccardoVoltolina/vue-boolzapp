@@ -21,7 +21,7 @@
 
 main {
     background-color: #DBDBD2;
-    height: 100vh;
+    height: 890px;
 }
 
 .top_bar {
@@ -41,7 +41,7 @@ main {
 
 
 .bg_light_gray {
-    background-color: #DBDBD2;
+    background-color: #E9EBEB;
 }
 
 
@@ -89,6 +89,8 @@ img {
 .height_600 {
     height: 600px;
 }
+
+
 
 /* sezione dx */
 
