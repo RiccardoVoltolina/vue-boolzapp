@@ -172,36 +172,7 @@ const { createApp } = Vue
             }
         ], 
         
-/*         computed: {
-            filtered_people(){
-                let vm = this;
-                if(!vm.filters.searchPeopleTextValue){
-                    return [];
-                }
-                return vm.sortedPeople.filter(people => {
-                    return people.name.toLowerCase().indexOf(vm.filters.searchPeopleTextValue.toLowerCase()) != -1
-                })
-            },
-            sortedPeople: function() {
-    
-                function compare(a, b) {
-    
-                    if (a.name < b.name)
-                        return -1;
-                    if (a.name > b.name)
-                        return 1;
-    
-                    return 0;
-                }
-    
-                let sortedArr = this.People.sort(compare);
-    
-                return sortedArr;
-            }
-        }
-    
- */
-              
+                 
       }
     },
     methods: {
@@ -229,7 +200,20 @@ const { createApp } = Vue
                status: 'received',
                
            })
-        },      
+        },    
+        
+        cercaContatto() {
+            for (let index = 0; index < this.contacts.length; index++) {
+                const verificaContatto = this.search.toLowerCase();
+                if (verificaContatto == '') {
+                    this.contacts[index].visible = true;
+                } else if (!this.contacts.name.toLowerCase().includes(search)) {
+                    this.contacts[index].visible = false;
+                }
+
+                
+            }
+        }
 
            
         
@@ -239,33 +223,13 @@ const { createApp } = Vue
 
 /* 
 
- computed: {
-        // returns list of cars based of filters
-        filtered_people(){
-            let vm = this;
-            if(!vm.filters.searchPeopleTextValue){
-                return [];
-            }
-            return vm.sortedPeople.filter(people => {
-                return people.name.toLowerCase().indexOf(vm.filters.searchPeopleTextValue.toLowerCase()) != -1
-            })
-        },
-        sortedPeople: function() {
-
-            function compare(a, b) {
-
-                if (a.name < b.name)
-                    return -1;
-                if (a.name > b.name)
-                    return 1;
-
-                return 0;
-            }
-
-            let sortedArr = this.People.sort(compare);
-
-            return sortedArr;
-        }
-    }
+Queste le task da fare:
+quando l'utente cerca qualcosa, ogni tasto che preme e rilasia invoca un metodo
+il metodo fa la ricerca
+verifica per ciascun contatto se il testo inserito nell'input search é incluso nel nome del contatto in quell'iterazione
+se si, setti il contatto come visible
+altrimento lo setti come non visibile. 
+12:35
+il tutto si traduce in un metodo con un if/else
 
 */

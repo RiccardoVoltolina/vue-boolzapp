@@ -88,7 +88,7 @@
     
                                     <div class="input-group p-2 border-start border-end">
                                         <span class="input-group-text bg-white no_border color_items" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                        <input type="text" class="form-control no_border" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                                        <input type="text" v-model="search" @keyup="cercaContatto()" class="form-control no_border" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
                                     </div>
     
                                     <!-- inizio area utenti -->
